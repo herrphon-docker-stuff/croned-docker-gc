@@ -3,5 +3,6 @@
 docker run -it --rm  \
            -v /var/run/docker.sock:/var/run/docker.sock \
            -v /etc:/etc  \
-           croned-docker-gc sh
+           scortum/croned-docker-gc \
+           bash
 

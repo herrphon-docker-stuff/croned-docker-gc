@@ -3,7 +3,7 @@ version: '2'
 services:
   croned-docker-gc:
     build: .
-    image: croned-docker-gc
+    image: scortum/croned-docker-gc
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "/etc:/etc"
