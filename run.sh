@@ -1,8 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xe
 
-docker run -it --rm  \
-           -v /var/run/docker.sock:/var/run/docker.sock \
-           -v /etc:/etc  \
-           scortum/croned-docker-gc \
-           bash
+docker-compose run croned-docker-gc $@
 

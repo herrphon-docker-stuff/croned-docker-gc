@@ -4,6 +4,7 @@ services:
   croned-docker-gc:
     build: .
     image: scortum/croned-docker-gc
+    container_name: croned-docker-gc
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "/etc:/etc"
