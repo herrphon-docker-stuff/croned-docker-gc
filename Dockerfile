@@ -28,9 +28,8 @@ RUN cd /tmp/ \
  && rm -rf /tmp/* 
 
 
-ADD container-content/entry.sh \
-    container-content/cronjob.config \
-    /
+COPY container-content/entry.sh /
+COPY container-content/cronjob.config /
 
 CMD ["/entry.sh"]
 
