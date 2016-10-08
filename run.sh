@@ -1,4 +1,4 @@
 #!/bin/bash -xe
 
-docker-compose run croned-docker-gc $@
+docker-compose run --rm croned-docker-gc $@
 
