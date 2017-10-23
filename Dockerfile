@@ -1,6 +1,4 @@
-FROM alpine:3.4
-MAINTAINER Alex
-
+FROM alpine:3.6
 
 RUN apk update \
  && apk upgrade \
@@ -13,11 +11,11 @@ RUN apk update \
 
 
 # from https://github.com/spotify/docker-gc/blob/master/Dockerfile
-ENV DOCKER_VERSION 1.12.1
+ENV DOCKER_VERSION 17.09.0
 
 RUN cd /tmp/ \
- && curl -sSL -O https://get.docker.com/builds/Linux/x86_64/docker-${DOCKER_VERSION}.tgz \
- && tar zxf docker-${DOCKER_VERSION}.tgz \
+ && curl -sSL -O https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKER_VERSION}-ce.tgz \
+ && tar zxf docker-${DOCKER_VERSION}-ce.tgz \
  && mkdir -p /usr/local/bin/ \
  && mv $(find . -type f -name 'docker') /usr/local/bin/ \
  && chmod +x /usr/local/bin/docker \
