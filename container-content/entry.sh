@@ -8,5 +8,5 @@ echo ... >> /var/log/cron.log
 crond   
 crontab /cronjob.config
 
-tail -f /var/log/cron.log
+exec tail -f /var/log/cron.log
 
